@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
-  --dark-color: #333333;
-  --light-color: #f4f4f4;
+  --primary-color: #3a1014;
+  --dark-color: #5c5858;
+  --light-color: #f6e2e2;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -16,10 +16,10 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #f4f4f4;
   color: #333;
 }
 
@@ -46,6 +46,10 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 /* Text Styles*/
@@ -114,6 +118,8 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  border-radius: 10px;
+  background-color: #e3e3e3;
 }
 
 /* List */
@@ -207,6 +213,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 8px;
 }
 
 .btn-link {
@@ -318,10 +325,10 @@ input {
   color: #888;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
 select,
 textarea {
   display: block;
@@ -329,9 +336,10 @@ textarea {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-input[type="submit"],
+input[type='submit'],
 button {
   font: inherit;
 }
@@ -355,7 +363,6 @@ table th {
   z-index: 1;
   width: 100%;
   opacity: 0.9;
-  margin-bottom: 1rem;
 }
 
 .navbar ul {
@@ -410,5 +417,40 @@ table th {
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  bottom: 0;
+  position: fixed;
+  height: 2.5rem;
+}
+.footer h1 {
+  float: right;
+  font-size: 1rem;
+  width: auto;
+  font-weight: normal;
+}
+.footer img {
+  width: 30px;
+}
+@media (max-width: 700px) {
+  .footer img {
+    width: 20px;
+    float: left;
+  }
+}
+@media (max-width: 350px) {
+  .footer img {
+    display: none;
+  }
+  footer h1 {
+    font-size: 0.7rem !important;
   }
 }

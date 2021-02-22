@@ -5,6 +5,7 @@ import Alert from './components/layout/Alert';
 import User from './components/users/User';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import Footer from './components/layout/Footer';
 import NotFound from './components/pages/NotFound';
 
 import GithubState from './context/github/GithubState';
@@ -29,6 +30,7 @@ const App = () => {
                 <Route component={NotFound} />
               </Switch>
             </div>
+            <Footer />
           </div>
         </Router>
       </AlertState>
